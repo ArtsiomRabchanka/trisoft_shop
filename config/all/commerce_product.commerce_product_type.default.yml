@@ -1,0 +1,16 @@
+uuid: 16f8c09f-5968-462b-ac85-9765502a8c67
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hwJoqnxqBS0fPM3s6FccZ2bWaq9LneRYLzFk-wlJWjs
+id: default
+label: Clothing
+traits: {  }
+locked: false
+description: ''
+variationType: default
+variationTypes:
+  - default
+multipleVariations: false
+injectVariationFields: false

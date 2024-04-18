@@ -1,0 +1,24 @@
+uuid: 8dc64450-3a1a-408a-9a10-6c98bfa1e3c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.size
+  module:
+    - facets
+  theme:
+    - b5subtheme
+id: b5subtheme_size
+theme: b5subtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:size'
+settings:
+  id: 'facet_block:size'
+  label: Size
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: b5subtheme_size
+visibility: {  }

@@ -1,0 +1,7 @@
+uuid: 089855ce-d35a-424b-b419-b63614f638c3
+langcode: en
+status: true
+dependencies: {  }
+id: default_attributes
+label: 'Default  Attributes'
+elementType: commerce_product_rendered_attribute

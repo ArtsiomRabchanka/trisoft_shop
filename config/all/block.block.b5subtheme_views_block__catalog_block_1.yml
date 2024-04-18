@@ -1,0 +1,32 @@
+uuid: 9192c50a-1a1f-4afd-b1c5-ec1c53d501c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.catalog
+  module:
+    - taxonomy
+    - views
+  theme:
+    - b5subtheme
+id: b5subtheme_views_block__catalog_block_1
+theme: b5subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:catalog-block_1'
+settings:
+  id: 'views_block:catalog-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      brand: brand

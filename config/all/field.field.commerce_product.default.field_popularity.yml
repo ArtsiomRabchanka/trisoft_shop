@@ -1,0 +1,23 @@
+uuid: 8429bcec-3b3f-493b-a7a5-6a4d9e9fa229
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.field_popularity
+id: commerce_product.default.field_popularity
+field_name: field_popularity
+entity_type: commerce_product
+bundle: default
+label: Popularity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

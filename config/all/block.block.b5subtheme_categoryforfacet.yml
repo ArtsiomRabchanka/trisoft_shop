@@ -1,0 +1,24 @@
+uuid: 02256396-2ccd-46d7-981b-e960fba7650b
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.category_for_facet
+  module:
+    - facets
+  theme:
+    - b5subtheme
+id: b5subtheme_categoryforfacet
+theme: b5subtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:category_for_facet'
+settings:
+  id: 'facet_block:category_for_facet'
+  label: 'Category for Facet'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: b5subtheme_categoryforfacet
+visibility: {  }
