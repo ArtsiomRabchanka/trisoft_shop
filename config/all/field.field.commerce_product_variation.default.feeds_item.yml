@@ -1,0 +1,23 @@
+uuid: 5e7a169a-b00c-498c-9fb0-5ca01262eac4
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.storage.commerce_product_variation.feeds_item
+  module:
+    - feeds
+id: commerce_product_variation.default.feeds_item
+field_name: feeds_item
+entity_type: commerce_product_variation
+bundle: default
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

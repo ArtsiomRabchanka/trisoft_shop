@@ -156,7 +156,7 @@ display:
           expose:
             label: Popularity
             field_identifier: field_popularity
-          exposed: false
+          exposed: true
       arguments: {  }
       filters:
         search_api_fulltext:
@@ -253,6 +253,15 @@ display:
           1: AND
       style:
         type: grid
+        options:
+          uses_fields: false
+          columns: 4
+          automatic_width: true
+          alignment: horizontal
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: ''
+          col_class_default: true
       row:
         type: search_api
       query:
@@ -263,6 +272,7 @@ display:
           preserve_facet_query_args: false
           query_tags: {  }
       relationships: {  }
+      css_class: ''
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -440,6 +450,8 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      defaults:
+        sorts: true
       exposed_block: true
       display_extenders: {  }
       path: catalog

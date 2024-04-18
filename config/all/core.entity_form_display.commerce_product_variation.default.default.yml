@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
+    - field.field.commerce_product_variation.default.feeds_item
     - field.field.commerce_product_variation.default.field_image
     - field.field.commerce_product_variation.default.field_weight
     - image.style.thumbnail
@@ -47,6 +48,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  feeds_item: true
   list_price: true
   sku: true
   title: true

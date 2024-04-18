@@ -11,6 +11,7 @@ module:
   comment: 0
   commerce: 0
   commerce_cart: 0
+  commerce_feeds: 0
   commerce_number_pattern: 0
   commerce_order: 0
   commerce_price: 0
@@ -27,6 +28,8 @@ module:
   entity: 0
   entity_reference_revisions: 0
   facets: 0
+  feeds: 0
+  feeds_tamper: 0
   field: 0
   field_ui: 0
   file: 0
@@ -55,6 +58,7 @@ module:
   shortcut: 0
   state_machine: 0
   system: 0
+  tamper: 0
   taxonomy: 0
   text: 0
   token: 0

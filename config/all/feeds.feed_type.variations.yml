@@ -1,0 +1,114 @@
+uuid: 944b9c5b-eb6a-4979-93f2-d3728c27e9d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.field.commerce_product_variation.default.field_weight
+  module:
+    - commerce_feeds
+    - commerce_product
+    - feeds_tamper
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      a7f1249f-0e76-4901-a087-815c4de48e0a:
+        character: $
+        side: trim
+        uuid: a7f1249f-0e76-4901-a087-815c4de48e0a
+        plugin: trim
+        source: price
+        weight: 0
+        label: 'Characters to trim'
+label: Variations
+id: variations
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:commerce_product_variation'
+processor_configuration:
+  values:
+    type: default
+  langcode: en
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  weight:
+    value: Weight
+    label: Weight
+    machine_name: weight
+    type: csv
+  id:
+    value: ID
+    label: ID
+    machine_name: id
+    type: csv
+  id_sku:
+    value: ID
+    label: ID
+    machine_name: id_sku
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  product_id:
+    value: product_id
+    label: product_id
+    machine_name: product_id
+    type: csv
+  price:
+    value: Price
+    label: Price
+    machine_name: price
+    type: csv
+mappings:
+  -
+    target: field_weight
+    map:
+      value: weight
+    settings:
+      language: null
+  -
+    target: variation_id
+    map:
+      value: id
+    settings: {  }
+    unique:
+      value: 1
+  -
+    target: sku
+    map:
+      value: id_sku
+    settings: {  }
+    unique: {  }
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: price
+    map:
+      number: price
+    settings:
+      currency_code: USD

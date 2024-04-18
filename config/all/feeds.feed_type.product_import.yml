@@ -1,0 +1,110 @@
+uuid: 87c70189-28a3-46b6-99ba-8404ab094b8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.field.commerce_product.default.field_brand
+  module:
+    - commerce_feeds
+    - commerce_product
+label: 'Product Import'
+id: product_import
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:commerce_product'
+processor_configuration:
+  values:
+    type: default
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  product_id:
+    value: product_id
+    label: product_id
+    machine_name: product_id
+    type: csv
+  stores_target_id:
+    value: stores_target_id
+    label: stores_target_id
+    machine_name: stores_target_id
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: csv
+  id:
+    value: ID
+    label: ID
+    machine_name: id
+    type: csv
+  brand:
+    value: Brand
+    label: Brand
+    machine_name: brand
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: product_id
+    map:
+      value: product_id
+    settings: {  }
+    unique:
+      value: 1
+  -
+    target: stores
+    map:
+      target_id: stores_target_id
+    settings:
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: false
+  -
+    target: variations
+    map:
+      target_id: id
+    settings:
+      reference_by: variation_id
+      autocreate: 0
+      autocreate_bundle: default
+      feeds_item: false
+  -
+    target: field_brand
+    map:
+      target_id: brand
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: brand
