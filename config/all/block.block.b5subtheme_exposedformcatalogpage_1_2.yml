@@ -1,6 +1,6 @@
 uuid: 9c68124d-3c07-4592-b1a9-bbb4ea88322f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.catalog
@@ -12,7 +12,7 @@ dependencies:
 id: b5subtheme_exposedformcatalogpage_1_2
 theme: b5subtheme
 region: sidebar_first
-weight: 0
+weight: -8
 provider: null
 plugin: 'views_exposed_filter_block:catalog-page_1'
 settings:
@@ -24,5 +24,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: '/taxonomy/term/*'
+    negate: false
+    pages: "/catalog\r\n/catalog/*"

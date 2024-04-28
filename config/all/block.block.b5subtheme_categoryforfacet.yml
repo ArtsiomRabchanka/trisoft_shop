@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.category_for_facet
   module:
     - facets
+    - system
   theme:
     - b5subtheme
 id: b5subtheme_categoryforfacet
 theme: b5subtheme
 region: sidebar_first
-weight: 0
+weight: -7
 provider: null
 plugin: 'facet_block:category_for_facet'
 settings:
@@ -21,4 +22,8 @@ settings:
   provider: facets
   context_mapping: {  }
   block_id: b5subtheme_categoryforfacet
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/catalog\r\n/catalog/*"

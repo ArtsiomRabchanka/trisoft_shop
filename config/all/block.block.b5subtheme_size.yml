@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.size
   module:
     - facets
+    - system
   theme:
     - b5subtheme
 id: b5subtheme_size
 theme: b5subtheme
 region: sidebar_first
-weight: 0
+weight: -6
 provider: null
 plugin: 'facet_block:size'
 settings:
@@ -21,4 +22,8 @@ settings:
   provider: facets
   context_mapping: {  }
   block_id: b5subtheme_size
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/catalog\r\n/catalog/*"
